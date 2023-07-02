@@ -1,0 +1,51 @@
+	.menu-item {
+			position: relative; /* 设置相对定位 */
+			display: inline-block;
+			/* margin-right: 20px; */
+			cursor: pointer;
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			/* color: gainsboro; */
+			/* background-color: ghostwhite; */
+			font-family: 'Courier New', Courier, monospace;
+		}
+
+		.menu-item .submenu {
+			display: none; /* 默认隐藏二级菜单 */
+			position: absolute; /* 设置绝对定位 */
+			top: 30px; /* 距顶部的距离 */
+			left: 0;
+			background-color: #fff; /* 背景色 */
+			padding: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+			color: black;
+			width: 80px;
+		}
+
+		.menu-item:hover .submenu,
+		.menu-item .submenu:hover {
+			display: block; /* 鼠标悬停时展开二级菜单 */
+		}
+
+		.menu-item .arrow {
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-top: 4px solid black; /* 修改箭头方向 */
+			border-right: 4px solid transparent;
+			border-left: 4px solid transparent;
+			margin-left: -5px;
+			margin-bottom: 2px;
+			transition: transform 0.2s; /* 添加过渡效果 */
+		}
+
+		.menu-item.open .arrow {
+			transform: rotate(180deg); /* 展开时旋转箭头 */
+		}
+		
+		.menuList .arrow {
+			color: white;
+			float: right;
+		}

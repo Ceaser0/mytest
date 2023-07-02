@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="css/index.css" rel="stylesheet" type="text/css"/>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<style>
+			 .btn {
+			      background-color: white;
+			      border-radius: 0;
+			      border: 0;
+			      /* height: 30px; */
+			    }
+				
+				.btn2 {
+				     background-color: white;
+				     border-radius: 0;
+				     border: 0;
+				     /* height: 30px; */
+				   }
+				     hr {
+				      position: absolute;
+				      width: 99%;
+				      z-index: -1;
+				    }
+		</style>
+	</head>
+	<body>
+		<!-- 第一部分 -->
+		<div style="color: #868ea1;;width: 99%;height: 30px;background-color: #f5f5f5;border: 1px solid #e6e6e6;
+			margin: auto;line-height: 30px">
+			<span>你好，欢迎来到×××商城&nbsp;&nbsp;&nbsp;&nbsp;[登录]&nbsp;&nbsp;[注册]</span>
+			<div style="float: right;">
+				<div class="menu-item">
+				    我的商城
+				    <span class="arrow"></span>
+					<div class="submenu"></div>
+				</div>|
+				<div class="menu-item">
+				    卖家中心
+				    <span class="arrow"></span>
+					<div class="submenu"></div>
+				</div>|
+				<div class="menu-item">
+				    我的订单
+					<div class="submenu"></div>
+				</div>|
+				<div class="menu-item">
+				    我的收藏
+				    <span class="arrow"></span>
+				    <div class="submenu">
+				        <div>收藏的商品</div>
+				        <div>收藏的店铺</div>
+					</div>
+				</div>|
+				<div class="menu-item">
+				    站内消息
+					<div class="submenu"></div>
+				</div>|
+				<div class="menu-item">
+				    更多链接
+				    <span class="arrow"></span>
+				    <div class="submenu">
+				        <div>商家入驻</div>
+				        <div>商家帮助</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<!-- 第二部分 -->
+		<div style="width: 90%;margin: auto;">
+			<div style="float: left;"><img src="img/logo.png" alt=""></div>
+			<div style="float: left;margin-left: 200px;">
+				<div>
+					<input type="text" style="width: 500px;height: 30px;border: 3px solid #3b98ee;"/>
+					<input type="button" value="搜索" style="margin-left: -5px;width: 100px;height: 37px;background-color: #3b98ee;border: 0;color: white;"/>
+				</div>
+				<div style="font-size: 12px;color: #868ea1;"><span>笔记本电脑&nbsp;&nbsp;&nbsp;&nbsp;女装&nbsp;&nbsp;&nbsp;&nbsp;0元试用</span></div>
+			</div>
+		</div>
+		<br />
+		<!-- 第三部分 -->
+		<div style="clear: both;width: 90%;margin: auto;">
+			<div style="width: 250px;height: 60px;background-color: royalblue;color: white;line-height: 60px;
+					font-size: 20px;display: inline-block;">全部商品分类</div>
+			<div style="font-size: 20px;display: inline-block;margin-left: 10px;">首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				  品牌团&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				  会员汇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				  合伙人招募</div>
+		</div>
+		<hr style="margin-top: 0px;color: #3b98ee;"/>
+		<!-- 第四部分 -->
+		<div style="clear: both;width: 90%;margin: auto;">
+			<!-- 第四部分左边 -->
+			<div style="line-height: 28.5px;float: left;width: 250px;background-color: #3b98ee;color: white;font-size: 18px;">
+				<div class="menuList" style="width: 100%;" onclick="handleClick(0)">家用电器<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(1)">手机，数码，京东通信<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(2)">电脑，办公<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(3)">家居，家居，家装，厨具<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(4)">男装，女装，内衣，珠宝<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(5)">个护洗化<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(6)">鞋靴，箱包，钟表，奢侈品<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(7)">运动户外<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(8)">汽车，汽车用品<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(9)">母婴，玩具乐器<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(10)">食品饮料<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(11)">营养保健<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(12)">彩票，旅行，充值，票务<span class="arrow">></span></div>
+				<div class="menuList" style="width: 100%;" onclick="handleClick(13)">理财，众筹，白条，保险<span class="arrow">></span></div>
+			</div>
+			<!-- 第四部分右边边 -->
+			<div style="float: left;margin-left:10px;width: 850px;">
+				<iframe style="overflow: hidden;height: 400px"
+				 id="iframeMain" src="index1-1.html" frameborder="0" name="iframeMain" width="100%"></iframe>
+			</div>
+		</div>
+
+		<!-- 一楼 -->
+		<div style="clear: both;margin-bottom: 550px;margin-top:450px;">
+			<div style="height: 30px;">
+				<div style="float: left;font-weight: bold;"><span>1F家用电器</span></div>
+				<div style="float: right;margin-right: 15px;">
+					<input class="btn" onclick="Btn(0);" type="button" value="家用电器"/>
+					|
+					<input class="btn" onclick="Btn(1)" type="button" value="大家电"/>
+					|
+					<input class="btn" onclick="Btn(2)" type="button" value="生活电器"/>
+					|
+					<input class="btn" onclick="Btn(3)" type="button" value="小电器"/>
+				</div>
+			</div>
+			<hr style="color: darkturquoise;margin-top: -8px;"/>
+			<div style="clear: both;">
+				<!-- 左边 -->
+				<div style="margin-top: 5px;float: left;width: 20%;height:500px;margin-top: -7px;">
+					<div style="width: 100%; height: 200px;">
+						<img src="img/1fbanner.png" width="100%" height="100%"/>
+					</div>
+					<div style="width: 100%;height: 100px;">
+						<img src="img/1-1.png" width="100%" height="100%"/>
+					</div>
+					<div style="width: 100%;height: 200px;">
+						<img src="img/1-2.png" width="100%" height="100%"/>
+					</div>
+				</div>
+				<!-- 右边 -->
+				<div style="margin-top: 5px;float: left;width: 80%;height:500px;margin-top: -7px;">
+					<iframe style="overflow: hidden;height: 530px;margin-top: -7px;"
+						 id="iframeMain1" src="index2-1.html" frameborder="0" name="iframeMain1" width="100%"></iframe>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- 二楼 -->
+		<div>
+			<div style="height: 30px;">
+				<div style="float: left;font-weight: bold;"><span>2F美容化妆</span></div>
+				<div style="float: right;margin-right: 15px;">
+					<input class="btn2" onclick="Btn2(0);" type="button" value="国际大牌"/>
+					|
+					<input class="btn2" onclick="Btn2(1)" type="button" value="护肤品"/>
+					|
+					<input class="btn2" onclick="Btn2(2)" type="button" value="个人护肤"/>
+					|
+					<input class="btn2" onclick="Btn2(3)" type="button" value="彩妆"/>
+					|
+					<input class="btn2" onclick="Btn2(4);" type="button" value="彩妆"/>
+					|
+					<input class="btn2" onclick="Btn2(5)" type="button" value="热销面膜"/>
+					|
+					<input class="btn2" onclick="Btn2(6)" type="button" value="珠宝首饰"/>
+					|
+					<input class="btn2" onclick="Btn2(7)" type="button" value="男士护肤"/>
+				</div>
+			</div>
+			<hr style="color: pink;margin-top: -8px;"/>
+			<div style="clear: both;">
+				<!-- 左边 -->
+				<div style="margin-top: 5px;float: left;width: 20%;height:500px;margin-top: -7px;">
+					<div style="width: 100%; height: 200px;">
+						<img src="img/2fbanner.png" width="100%" height="100%"/>
+					</div>
+					<div style="width: 100%;height: 100px;">
+						<img src="img/2-1.png" width="100%" height="100%"/>
+					</div>
+					<div style="width: 100%;height: 200px;">
+						<img src="img/2-2.png" width="100%" height="100%"/>
+					</div>
+				</div>
+				<!-- 右边 -->
+				<div style="margin-top: 5px;float: left;width: 80%;height:500px;margin-top: -7px;">					
+					<iframe style="overflow: hidden;height: 530px;margin-top: -7px;"
+							 id="iframeMain2" src="index2-5.html" frameborder="0" name="iframeMain2" width="100%"></iframe>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		function Btn(btnNum){
+			var btn = document.getElementsByClassName("btn");
+			for(var temp of btn){
+				temp.style.border="0px";
+			}
+			btn[btnNum].style.borderLeft="2px solid darkturquoise";
+			btn[btnNum].style.borderRight="2px solid darkturquoise";
+			btn[btnNum].style.borderTop="3px solid darkturquoise";
+			btn[btnNum].style.borderBottom="2px solid white";
+			
+			var iframeMain1 = document.getElementById("iframeMain1");
+			//根据点的按钮，切换图片
+			if(btnNum==0){
+				iframeMain1.src="index2-1.html";
+			}
+			if(btnNum==1){
+				iframeMain1.src="index2-2.html";
+			}
+			if(btnNum==2){
+				iframeMain1.src="index2-3.html";
+			}
+			if(btnNum==3){
+				iframeMain1.src="index2-4.html";
+			}
+			
+		}
+		
+		
+		function Btn2(btnNum){
+			var btn2 = document.getElementsByClassName("btn2");
+			for(var temp of btn2){
+				temp.style.border="0px";
+			}
+			btn2[btnNum].style.borderLeft="2px solid pink";
+			btn2[btnNum].style.borderRight="2px solid pink";
+			btn2[btnNum].style.borderTop="3px solid pink";
+			btn2[btnNum].style.borderBottom="2px solid white";
+			
+			var iframeMain2 = document.getElementById("iframeMain2");
+			//根据点的按钮，切换图片
+			if(btnNum==0){
+				iframeMain2.src="index2-5.html";
+			}
+			if(btnNum==1){
+				iframeMain2.src="index2-6.html";
+			}
+			if(btnNum==2){
+				iframeMain2.src="index2-7.html";
+			}
+			if(btnNum==3){
+				iframeMain2.src="index2-8.html";
+			}
+			if(btnNum==4){
+				iframeMain2.src="index2-9.html";
+			}
+			if(btnNum==5){
+				iframeMain2.src="index2-10.html";
+			}
+			if(btnNum==6){
+				iframeMain2.src="index2-11.html";
+			}
+			if(btnNum==7){
+				iframeMain2.src="index2-12.html";
+			}
+		}
+	</script>
+	
+	<script>
+		//菜单点击事件
+		var menuList = document.getElementsByClassName("menuList");
+		var iframeMain = document.getElementById('iframeMain');
+		//被点菜单样式变换
+		function handleClick(divNumber){
+			for(var menu of menuList){
+				menu.style.backgroundColor="";
+				menu.style.color="";
+			}
+			if(divNumber==0){
+				iframeMain.src="index1-2.html";
+			}else if(divNumber==1){
+				iframeMain.src="index1-3.html";
+			}else{
+				iframeMain.src="index1-1.html";
+			}
+			menuList[divNumber].style.backgroundColor="white";
+			menuList[divNumber].style.color="red";
+		}
+	</script>
+	
+	<script>
+		// 获取所有的菜单项
+				const menuItems = document.querySelectorAll('.menu-item');
+		
+				// 为每个菜单项添加事件监听器
+				menuItems.forEach(function(item) {
+					let timeoutId; // 用于延迟隐藏二级菜单的定时器
+					const submenu = item.querySelector('.submenu');
+		
+					item.addEventListener('mouseover', function() {
+						this.classList.add('open'); // 添加 open 类来标记展开状态
+						clearTimeout(timeoutId); // 清除延迟隐藏的定时器
+						submenu.style.display = 'block';
+					});
+		
+					item.addEventListener('mouseout', function() {
+						timeoutId = setTimeout(function() {
+							item.classList.remove('open'); // 移除 open 类来标记收起状态
+							submenu.style.display = 'none';
+						}, 200); // 延迟隐藏二级菜单
+					});
+		
+					submenu.addEventListener('mouseover', function() {
+						clearTimeout(timeoutId); // 鼠标进入二级
+						this.classList.add('open'); // 保持菜单展开状态
+						submenu.style.display = 'block';
+					});
+		
+					submenu.addEventListener('mouseout', function() {
+						// 获取鼠标当前位置和二级菜单的位置
+						const rect = submenu.getBoundingClientRect();
+						const mouseX = event.clientX;
+						const mouseY = event.clientY;
+						
+						// 判断鼠标是否移出二级菜单，如果是则隐藏菜单
+						if (mouseX < rect.left || mouseY < rect.top || mouseX > rect.right || mouseY > rect.bottom) {
+							item.classList.remove('open'); // 移除 open 类来标记收起状态
+							submenu.style.display = 'none';
+						}
+					});
+				});
+	</script>
+</html>index

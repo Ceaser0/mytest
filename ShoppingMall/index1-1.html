@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+		.banner {
+			width: 600px;
+			margin: auto;
+			border: 1px solid green;
+			height: 350px;
+			position: relative;
+			overflow: hidden;
+		}
+		.imgList img {
+			width: 600px;
+			height: 350px;
+		}
+		.imgList {
+			/* 绝对定位 */
+			position: absolute;
+			/* left:-600px; */
+			/* width: 2600px; */
+		}
+		.imgList li {
+			float: left;
+			margin-right: 20px;
+			list-style: none;
+		}
+		.circle {
+			position: absolute;
+			bottom: 15px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.circle a {
+			width: 15px;
+			height: 15px;
+			background: green;
+			display: block;
+			border-radius: 50%;
+			opacity: .8;
+			float: left;
+			margin-right: 10px;
+		}
+		.circle a.hover {
+			background: black;
+			opacity: .7;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<ul class="imgList">
+			<li><img src="img/flex1.jpg" /></li>
+			<li><img src="img/flex2.jpg" /></li>
+			<li><img src="img/flex1.jpg" /></li>
+			<li><img src="img/flex2.jpg" /></li>
+		</ul>
+		<div class="circle">
+			<!-- <a href="javascript:;"></a>
+			<a href="javascript:;"></a> -->
+		</div>
+	</div>
+	<!-- 实现 点击小圆点 图片滑动  小圆点样式改变 -->
+	<script type="text/javascript">
+		// 确定ul的宽度 动态的创建小圆点
+		var imgList = document.querySelector('.imgList');
+		var circle = document.querySelector('.circle');
+		var circleA = circle.children;
+		// thisIndex默认索引值是0
+		var thisIndex = 0;
+		// console.log(imgList.children.length);
+		// window.onload延迟加载函数
+		window.onload = function () {
+			//给ui标签设置宽度
+			imgList.style.width = imgList.children.length * 620 + 'px';
+ 			//下面动态创建a标签
+			for (var i = 0; i < imgList.children.length; i++) {
+				var aNode = document.createElement('a');
+ 				//我们在这里创建index属性来记录索引值
+				aNode.setAttribute('index', i);
+				circle.appendChild(aNode);
+			}
+			//给小圆点加点击事件
+			circle.addEventListener('click', function (e) {
+ 				//这里给a标签点击事件有个小bug 就是我们鼠标点击到.circle标签时候图片也滑动了 
+				//解决上面小bug的方法
+				if (e.target.nodeName != 'A') {
+					return false;
+				}
+ 				// e.target指向的是a标签
+				console.log(e.target);
+				// console.log(e.target.nodeName);
+				// 获得索引值
+				thisIndex = e.target.getAttribute('index');
+				// console.log(thisIndex);
+				//图片移动的规则 0索引值 ->0  1 ->-1*620  2 ->-2*620 
+				imgList.style.left = -thisIndex * 620 + 'px';
+ 				//调用小圆点改变样式的函数
+				circlechange();
+			})
+ 			function circlechange() {
+				//先清除样式 再添加样式
+				for (var i = 0; i < circleA.length; i++) {
+					circleA[i].className = '';
+				}
+				circleA[thisIndex].className = 'hover';
+			}
+ 			// 自动轮播
+			setInterval(function () {
+				thisIndex++;
+				if (thisIndex >= imgList.children.length) {
+					thisIndex = 0;
+				}
+				imgList.style.left = -thisIndex * 620 + 'px';
+				circlechange();
+			}, 1000);
+		}
+	</script>
+</body>
+</html>
